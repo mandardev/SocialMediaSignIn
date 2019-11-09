@@ -29,10 +29,28 @@
                                     <action selector="signInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7u4-df-8w7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVw-SH-8w0">
+                                <rect key="frame" x="75" y="530" width="264" height="46"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="6KF-Fi-sSz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fbSignInBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJo-Bx-LDw"/>
+                                    <action selector="signInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThS-ci-edP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="oVw-SH-8w0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0LH-Uy-Ejy"/>
                             <constraint firstItem="4aB-kb-7Nm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="B4M-aa-qYi"/>
+                            <constraint firstItem="oVw-SH-8w0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="100" id="D6a-jn-g4W"/>
+                            <constraint firstItem="oVw-SH-8w0" firstAttribute="width" secondItem="4aB-kb-7Nm" secondAttribute="width" id="GZ6-Q0-0rH"/>
                             <constraint firstItem="4aB-kb-7Nm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="n27-4V-t9u"/>
                             <constraint firstItem="4aB-kb-7Nm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-150" id="xui-kV-19t"/>
                         </constraints>
@@ -40,6 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="A8q-Vz-FCq"/>
                     <connections>
+                        <outlet property="fbsigninbtn" destination="oVw-SH-8w0" id="iRa-TG-TBe"/>
                         <outlet property="gmailSignInButton" destination="4aB-kb-7Nm" id="gca-o9-Foq"/>
                     </connections>
                 </viewController>

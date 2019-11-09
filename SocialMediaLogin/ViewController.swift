@@ -13,6 +13,8 @@ class ViewController: UIViewController, GIDSignInDelegate {
 
     @IBOutlet weak var gmailSignInButton: UIButton!
     
+    @IBOutlet weak var fbsigninbtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -28,6 +30,10 @@ class ViewController: UIViewController, GIDSignInDelegate {
         GIDSignIn.sharedInstance().delegate=self
         GIDSignIn.sharedInstance().signIn()
     }
+    
+    @IBAction func fbSignInBtnAction(_ sender: Any) {
+    }
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
           if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
