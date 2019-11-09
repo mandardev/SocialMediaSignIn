@@ -11,27 +11,16 @@ import GoogleSignIn
 
 class UserInfoViewController: UIViewController {
 
-
-    @IBOutlet weak var btn: UIButton!
+    @IBOutlet weak var signOutBtn: UIButton!
     
-    @IBAction func btnAction(_ sender: Any) {
-        print("")
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func signOutBtnAction(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+        GIDSignIn.sharedInstance()?.disconnect()
+        self.view.removeFromSuperview()
     }
-    */
 
 }

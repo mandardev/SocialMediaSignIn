@@ -26,18 +26,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqS-qn-5YA">
-                                <rect key="frame" x="179" y="722" width="56" height="30"/>
-                                <state key="normal" title="SignOut"/>
-                                <connections>
-                                    <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7h0-6F-flt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hqS-qn-5YA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Oh-vX-p3d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hqS-qn-5YA" secondAttribute="bottom" constant="110" id="6nj-Ph-cm1"/>
                             <constraint firstItem="4aB-kb-7Nm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="B4M-aa-qYi"/>
                             <constraint firstItem="4aB-kb-7Nm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="n27-4V-t9u"/>
                             <constraint firstItem="4aB-kb-7Nm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-150" id="xui-kV-19t"/>
@@ -46,7 +37,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="A8q-Vz-FCq"/>
                     <connections>
-                        <outlet property="btn" destination="hqS-qn-5YA" id="cV1-HU-rCK"/>
                         <outlet property="gmailSignInButton" destination="4aB-kb-7Nm" id="gca-o9-Foq"/>
                     </connections>
                 </viewController>

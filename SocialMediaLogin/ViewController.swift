@@ -9,25 +9,41 @@
 import UIKit
 import GoogleSignIn
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInDelegate {
 
-    @IBAction func btnAction(_ sender: Any) {
-        GIDSignIn.sharedInstance().signOut()
-
-    }
-    @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var gmailSignInButton: GIDSignInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
-
         // Automatically sign in the user.
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-
-        // ...
-        // Do any additional setup after loading the view.
+        // GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        GIDSignIn.sharedInstance().delegate = self
+        if((GIDSignIn.sharedInstance()?.currentUser) != nil){
+            self.addUserInfoViewController()
+        }
     }
-
-
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+          if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+            print("The user has not signed in before or they have since signed out.")
+          } else {
+            print("\(error.localizedDescription)")
+          }
+          return
+        }
+        self.addUserInfoViewController()
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        print("Perform any operations when the user disconnects from app here.")
+    }
+    
+    func addUserInfoViewController() {
+        let userInfoController = UserInfoViewController.init(nibName: "UserInfoViewController", bundle: nil)
+        self.addChild(userInfoController)
+        self.view.addSubview(userInfoController.view)
+    }
 }
 
