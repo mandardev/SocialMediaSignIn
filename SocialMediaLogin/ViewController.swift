@@ -11,7 +11,7 @@ import GoogleSignIn
 
 class ViewController: UIViewController, GIDSignInDelegate {
 
-    @IBOutlet weak var gmailSignInButton: GIDSignInButton!
+    @IBOutlet weak var gmailSignInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,10 @@ class ViewController: UIViewController, GIDSignInDelegate {
         }
     }
     
+    @IBAction func signInButtonAction(_ sender: Any) {
+        GIDSignIn.sharedInstance().delegate=self
+        GIDSignIn.sharedInstance().signIn()
+    }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
           if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
