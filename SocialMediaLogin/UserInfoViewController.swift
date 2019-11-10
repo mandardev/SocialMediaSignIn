@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleSignIn
-
+import FBSDKCoreKit
 class UserInfoViewController: UIViewController {
 
     @IBOutlet weak var signOutBtn: UIButton!
@@ -17,10 +17,12 @@ class UserInfoViewController: UIViewController {
         super.viewDidLoad()
     }
     
+//MARK:- Sign-Out Method
+    
     @IBAction func signOutBtnAction(_ sender: Any) {
         GIDSignIn.sharedInstance().signOut()
         GIDSignIn.sharedInstance()?.disconnect()
+        AccessToken.current=nil
         self.view.removeFromSuperview()
     }
-
 }

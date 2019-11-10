@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F0417BFA825055A26B15094 /* libPods-SocialMediaLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB399252E742021E981EB92 /* libPods-SocialMediaLogin.a */; };
+		3D2C0F7ED0455B5F239D6849 /* Pods_SocialMediaLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486935FB8DAF65B0090892E6 /* Pods_SocialMediaLogin.framework */; };
 		9BE238EF2376538A007BC02C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE238EE2376538A007BC02C /* AppDelegate.swift */; };
 		9BE238F12376538A007BC02C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE238F02376538A007BC02C /* SceneDelegate.swift */; };
 		9BE238F32376538A007BC02C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE238F22376538A007BC02C /* ViewController.swift */; };
@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		486935FB8DAF65B0090892E6 /* Pods_SocialMediaLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7610B9F3B5B64F2D3C01E5A0 /* Pods-SocialMediaLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaLogin.debug.xcconfig"; path = "Target Support Files/Pods-SocialMediaLogin/Pods-SocialMediaLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		9BE238EB2376538A007BC02C /* SocialMediaLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMediaLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE238EE2376538A007BC02C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +33,6 @@
 		9BE2390223765560007BC02C /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9BE2390423765CF5007BC02C /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		9BE2390823766C97007BC02C /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
-		BFB399252E742021E981EB92 /* libPods-SocialMediaLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SocialMediaLogin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F84A19DBA0EAFAEBD1EAB1 /* Pods-SocialMediaLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMediaLogin.release.xcconfig"; path = "Target Support Files/Pods-SocialMediaLogin/Pods-SocialMediaLogin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F0417BFA825055A26B15094 /* libPods-SocialMediaLogin.a in Frameworks */,
+				3D2C0F7ED0455B5F239D6849 /* Pods_SocialMediaLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 		DD461B8263B45D53612B831E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BFB399252E742021E981EB92 /* libPods-SocialMediaLogin.a */,
+				486935FB8DAF65B0090892E6 /* Pods_SocialMediaLogin.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +112,7 @@
 				9BE238E82376538A007BC02C /* Frameworks */,
 				9BE238E92376538A007BC02C /* Resources */,
 				789C2FF15F70FD90AD35D3EB /* [CP] Copy Pods Resources */,
+				E139DD77464E1B56B3832BB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +209,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMediaLogin/Pods-SocialMediaLogin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E139DD77464E1B56B3832BB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaLogin/Pods-SocialMediaLogin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaLogin/Pods-SocialMediaLogin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMediaLogin/Pods-SocialMediaLogin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

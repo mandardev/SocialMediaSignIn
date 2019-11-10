@@ -41,7 +41,6 @@
                                 </state>
                                 <connections>
                                     <action selector="fbSignInBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJo-Bx-LDw"/>
-                                    <action selector="signInButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThS-ci-edP"/>
                                 </connections>
                             </button>
                         </subviews>

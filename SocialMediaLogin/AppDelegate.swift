@@ -8,14 +8,15 @@
 
 import UIKit
 import GoogleSignIn
+import FBSDKCoreKit
+import FacebookLogin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        GIDSignIn.sharedInstance().clientID = "265259772894-0ic0111066fiqjantbejk7c0q0n1d4hp.apps.googleusercontent.com"
-        
+        GIDSignIn.sharedInstance().clientID = "YOUR_URL_SCHEME"
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
 
@@ -34,7 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-          return GIDSignIn.sharedInstance().handle(url)
+        let appId: String = "FB_APP_ID"
+        if url.scheme != nil && url.scheme!.hasPrefix("fb\(appId)") && url.host ==  "authorize" {
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
+        }else if let _ = GIDSignIn.sharedInstance()?.handle(url){
+              return GIDSignIn.sharedInstance().handle(url)
+        }
+        return false
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppEvents.activateApp()
     }
 }
 
